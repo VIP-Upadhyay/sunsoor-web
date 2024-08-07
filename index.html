@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sunsoor.in - E-Learning and Job Portal</title>
+        <meta name="description" content="Sunsoor.in is a revolutionary e-learning and job portal platform. Enhance your skills and find your dream job with us.">
+        <link rel="stylesheet" href="/css/style.css">
+        
+        <!-- Favicon -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+        <link rel="manifest" href="/images/favicon/site.webmanifest">
+        
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://sunsoor.in/">
+        <meta property="og:title" content="Sunsoor.in - E-Learning and Job Portal">
+        <meta property="og:description" content="Enhance your skills and find your dream job with Sunsoor.in, a revolutionary e-learning and job portal platform.">
+        <meta property="og:image" content="https://sunsoor.in/images/logo.png">
+    
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://sunsoor.in/">
+        <meta property="twitter:title" content="Sunsoor.in - E-Learning and Job Portal">
+        <meta property="twitter:description" content="Enhance your skills and find your dream job with Sunsoor.in, a revolutionary e-learning and job portal platform.">
+        <meta property="twitter:image" content="https://sunsoor.in/images/logo.png">
+    </head>
+<body>
+    <div class="container">
+        <header class="glassmorphism">
+            <div class="logo">
+                <img src="/images/logo.png"  alt="Sunsoor.in Logo">
+            </div>
+            <nav>
+                <a href="/">Home</a>
+                <a href="#features">Features</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="hero">
+                <div class="hero-content">
+                    <div id="countdown-content">
+                        <h1>Coming Soon</h1>
+                        <p>Get ready for a revolutionary learning and career platform</p>
+                        <div class="countdown">
+                            <div class="countdown-item">
+                                <span id="days">00</span>
+                                <p>Days</p>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="hours">00</span>
+                                <p>Hours</p>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="minutes">00</span>
+                                <p>Minutes</p>
+                            </div>
+                            <div class="countdown-item">
+                                <span id="seconds">00</span>
+                                <p>Seconds</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="download-content" style="display: none;">
+                        <h1>Sunsoor.in is Live!</h1>
+                        <p>Access our revolutionary learning and career platform now</p>
+                        <a href="/apk/sunsoor.apk" class="download-button">Download Android App</a>
+                    </div>
+                </div>
+            </section>
+
+            <div class="features" id="features">
+                <div class="feature-card glassmorphism">
+                    <img src="/images/Promote your business.svg" alt="E-Learning">
+                    <h2>E-Learning</h2>
+                    <p>Access a wide range of courses and improve your skills.</p>
+                </div>
+                <div class="feature-card glassmorphism">
+                    <img src="/images/get jobs easily.svg" alt="Job Portal">
+                    <h2>Job Portal</h2>
+                    <p>Find your dream job or hire talented professionals.</p>
+                </div>
+                <div class="feature-card glassmorphism">
+                    <img src="/images/reffer and earn.svg" alt="Refer and Earn">
+                    <h2>Refer and Earn</h2>
+                    <p>Earn rewards by referring friends and colleagues.</p>
+                </div>
+            </div>
+
+            <div class="contact-info glassmorphism" id="contact">
+                <h2>Contact Us</h2>
+                <p>Email: satishkurve@sunsoor.in</p>
+                <p>Phone: +91 9766245370</p>
+                <p>Address: Rameshchand Soni, Lohiya Ward, Ring Road, Gondia City, Gondia, Gondia-441614, Maharashtra </p>
+            </div>
+        </main>
+
+        <footer class="glassmorphism">
+            <nav>
+                <a href="/privacy.html">Privacy Policy</a>
+                <a href="/terms.html">Terms and Conditions</a>
+                <a href="https://merchant.razorpay.com/policy/NEyv6kMVPzBJL5/refund">Cancellation & Refund Policy</a>
+                <a href="https://merchant.razorpay.com/policy/NEyv6kMVPzBJL5/shipping">Shipping & Delivery Policy</a>
+            </nav>
+        </footer>
+    </div>
+    <script>
+        const countDownDate = new Date("August 10, 2024 10:00:00").getTime();
+        const countdownContent = document.getElementById("countdown-content");
+        const downloadContent = document.getElementById("download-content");
+
+        const countdown = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = countDownDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days.toString().padStart(2, '0');
+            document.getElementById("hours").innerHTML = hours.toString().padStart(2, '0');
+            document.getElementById("minutes").innerHTML = minutes.toString().padStart(2, '0');
+            document.getElementById("seconds").innerHTML = seconds.toString().padStart(2, '0');
+
+            if (distance < 0) {
+                clearInterval(countdown);
+                countdownContent.style.display = "none";
+                downloadContent.style.display = "block";
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
